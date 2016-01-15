@@ -1,0 +1,59 @@
+﻿<div class="row ccBackground">
+    <div class="col-md-12">
+        <div class="col-md-12 ccVoidRow">
+
+        </div>
+        <div class="row">
+            <div class="col-md-6  ccCustomers">
+                <div class="row ">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 ccLoginBox">
+
+                        <div>
+                            <div ng-switch on="home.custLoginWindow">
+                                <div ng-switch-when="1">
+                                    <ng-include src="'/presentation/ngApp/views/loginCustomerDefault.html'"></ng-include>
+                                </div>
+                                <div ng-switch-when="2">
+                                    <ng-include src="'/presentation/ngApp/views/loginCustomerInput.html'"></ng-include>
+                                </div>
+                                <div ng-switch-when="3">
+                                    <ng-include src="'/presentation/ngApp/views/'"></ng-include>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row"></div>
+
+            </div>
+            <div class="col-md-6 ccBusiness">
+                <div class="row">
+                    <div class="col-md-3"></div>
+                    <div class="col-md-6 ccLoginBox">
+
+                        <div>
+                            <div ng-switch on="home.bussLoginWindow">
+                                <div ng-switch-when="1">
+                                    <ng-include src="'/presentation/ngApp/views/loginBusinessDefault.html'"></ng-include>
+                                </div>
+                                <div ng-switch-when="2">
+                                    <ng-include src="'/presentation/ngApp/views/loginBusinessInput.html'"></ng-include>
+                                </div>
+                                <div ng-switch-when="3">
+                                    <ng-include src="'/presentation/ngApp/views/'"></ng-include>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3"></div>
+                </div>
+                <div class="row"></div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

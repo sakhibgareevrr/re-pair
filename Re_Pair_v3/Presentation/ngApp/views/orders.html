@@ -1,0 +1,38 @@
+﻿<div class="row">
+    <div class="col-md-4" ng-repeat="order in olc.orders">
+        <div class="col-md-12">
+            Order: 
+            {{order.id}}
+        </div>
+        <div class="col-md-12">
+            {{order.business.userName}}
+        </div>
+        <div class="col-md-12">
+            {{order.customer.userName}}
+        </div>
+        <div class="col-md-12">
+            {{order.customer.userAddress}}
+        </div>
+        <div class="col-md-12">
+            {{order.price}}
+        </div>
+        <div class="col-md-12">
+            {{order.orderDate}}
+        </div>
+        <div class="col-md-12">
+            {{order.completionDate}}
+        </div>
+    </div>
+    <div class="col-md-4" ng-repeat="userAddress in olc.userAddresses">
+        <div class="col-md-12">
+            Address:
+            {{userAddress.id}}
+        </div>
+        <div class="col-md-12">
+            {{userAddress.firstName}}
+        </div>
+        <div class="col-md-12">
+            {{userAddress.lastName}}
+        </div>
+    </div>
+</div>

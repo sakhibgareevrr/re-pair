@@ -1,0 +1,84 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml" ng-app="Re_Pair_v3">
+<head>
+    <title></title>
+
+    @Styles.Render("~/Content/css")
+
+    @Scripts.Render("~/Scripts/angular")
+    @Scripts.Render("~/Scripts/ngApp")
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  
+
+</head>
+<body>
+
+    @*<div class="row">
+        <a href="#/" class="btn btn-default">Home</a>
+        <span ng-controller="authController as auth">
+            <a href="#/login" class="btn btn-default" ng-show="!auth.isLoggedIn()">Login</a>
+            <span class="btn btn-default" ng-click="auth.logout()" ng-show="auth.isLoggedIn()">Logout</span>
+        </span>
+    </div>*@
+
+    @*<div class="container">
+        <ng-view></ng-view>
+    </div>*@
+    <div class="container" ng-controller="authController as auth">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+                    <div class="col-md-12">
+                        <label class="ccLogo">re-pair</label>
+                        <label class="ccSlogan">let's be fair</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="col-md-2 ">
+                            <label class="btn btn-default btn-block ccNavMenu" ng-click="auth.gotoHome()">Home</label>
+                        </div>
+                        <div class="col-md-2 ccNavMenu">
+                            <label class="btn btn-default btn-block ccNavMenu">Customers</label>
+
+                        </div>
+                        <div class="col-md-2 ccNavMenu">
+                            <label class="btn btn-default btn-block ccNavMenu">Business</label>
+
+                        </div>
+                        <div class="col-md-2 ccNavMenu">
+                            <label class="btn btn-default btn-block ccNavMenu">Contact</label>
+
+                        </div>
+                        <div class="col-md-2 ccNavMenu">
+                            <label class="btn btn-default btn-block ccNavMenu" ng-click="auth.logout()" ng-show="auth.isLoggedIn()">Log Out</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row ccBelowTheMenu"></div>
+
+
+                <div ng-view></div>
+
+                <div class="row ">
+                    <div class="col-md-4">
+
+                    </div>
+
+                    @*<div class="col-md-4 ccBtmImage">*@
+                    <div class="col-md-4">
+
+                    </div>
+                    <div class="col-md-4">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

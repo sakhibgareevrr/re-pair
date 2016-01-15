@@ -1,0 +1,20 @@
+﻿<div class="row">
+    <form ng-submit="auth.login()">
+        <div class="col-md-4">
+            <label>
+                Username:
+                <input ng-model="auth.username" type="text" class="form-control" />
+            </label>
+        </div>
+        <div class="col-md-4">
+            <label>
+                Password:
+                <input ng-model="auth.password" type="password" class="form-control" />
+            </label>
+        </div>
+        <div class="col-md-4">
+            <input type="submit" value="login" />
+        </div>
+    </form>
+</div>
+

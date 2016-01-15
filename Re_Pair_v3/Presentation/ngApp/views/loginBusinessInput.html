@@ -1,0 +1,17 @@
+﻿
+
+<form>
+    <div>
+        <label class="ccEnterLogin">Username:</label>
+        <input ng-model="auth.businessusername" class="form-control" type="text" placeholder="Business username" />
+    </div>
+    <div>
+        <label class="ccEnterLogin">Password:</label>
+        <input ng-model="auth.password" class="form-control" type="password" placeholder="Password" />
+        <label class="ccEnterLogin" ng-click="auth.loginBusiness()">Login</label>
+        or
+        <label class="ccEnterLogin" ng-click="home.cancelBussLogin()">Cancel</label>
+        <br />
+    </div>
+</form>
+

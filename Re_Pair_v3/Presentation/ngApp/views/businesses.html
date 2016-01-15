@@ -1,0 +1,154 @@
+﻿<div class="row">
+    <div class="col-md-6">
+        <h3>Service Tickets</h3>
+        <div class="col-md-12 ccOrder" ng-repeat="order in blc.orders">
+            <div class="col-md-12">
+
+                <div class="col-md-4 text-right">
+                    Contractor name:
+                </div>
+                <div class="col-md-8">
+                    {{order.business.companyName}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4 text-right">
+                    Repair service:
+                </div>
+                <div class="col-md-8">
+                    {{order.serviceName}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4 text-right">
+                    Start date:
+                </div>
+                <div class="col-md-8">
+                    {{order.orderDate | date : 'medium'}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4 text-right">
+                    Completion date:
+                </div>
+                <div class="col-md-8">
+                    {{order.completionDate | date : 'medium'}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4 text-right">
+                    Price:
+                </div>
+                <div class="col-md-8">
+                    ${{order.price}}
+                </div>
+            </div>
+            <div class="col-md-12" ng-if="order.isApproved">
+                <div class="col-md-4 text-right">
+                    Proceeded:
+                </div>
+                <div class="col-md-8">
+                    Yes
+                </div>
+            </div>
+            <div class="col-md-12" ng-if="!order.isApproved">
+                <div class="col-md-4 text-right">
+                    Proceeded:
+                </div>
+                <div class="col-md-8">
+                    No
+                </div>
+            </div>
+            <div class="col-md-12" ng-if="order.isCompleted">
+                <div class="col-md-4 text-right">
+                    Completed:
+                </div>
+                <div class="col-md-8">
+                    Yes
+                </div>
+            </div>
+            <div class="col-md-12" ng-if="!order.isCompleted">
+                <div class="col-md-4 text-right">
+                    Completed:
+                </div>
+                <div class="col-md-8">
+                    No
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-4 text-right">
+                    Quality:
+                </div>
+                <div class="col-md-8">
+                     {{order.serviceQuality}}
+                </div>
+            </div>
+  ghbv
+            <label class="btn btn-default ccOrderBtns pull-right" ng-click="blc.goToUpdate(order.id)">Update</label>
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <h3>Business Providers</h3>
+        <div class="col-md-12 ccBusinessProvider" ng-repeat="business in blc.businessUsers">
+            <div class="col-md-12">
+                <div class="col-md-5 text-right">
+                    Company name:
+                </div>
+                <div class="col-md-7">
+                    {{business.companyName}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-5 text-right">
+                    Service category:
+                </div>
+                <div class="col-md-7">
+                    {{business.serviceCategory}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-5 text-right">
+                    Description:
+                </div>
+                <div class="col-md-7">
+                    {{business.description}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-5 text-right">
+                    Business contact name:
+                </div>
+                <div class="col-md-7">
+                    {{business.userAddresses[0].firstName}} {{business.userAddresses[0].lastName}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-5 text-right">
+                    Phone:
+                </div>
+                <div class="col-md-7">
+                    {{business.userAddresses[0].phone}}
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="col-md-5 text-right">
+                    Address:
+                </div>
+                <div class="col-md-7">
+                    {{business.userAddresses[0].addressLine1}}
+                    <br />
+                    <div>
+                        {{business.userAddresses[0].addressLine2}}
+                    </div>
+                    {{business.userAddresses[0].city}}, {{business.userAddresses[0].state}} {{business.userAddresses[0].zipcode}}
+                </div>
+            </div>
+            <label class="btn btn-default ccBussProvBtns" ng-click="blc.setBusinessUserforOrder(business.userName)">Quote</label>
+
+        </div>
+
+
+
+    </div>
+</div>

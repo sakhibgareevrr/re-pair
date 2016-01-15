@@ -1,0 +1,159 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+
+* {
+    /*border: 1px solid red;*/
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+  color:inherit;
+  text-decoration: none;
+ }
+
+.body {
+   
+}
+
+.ccLogo {
+    font-size: 30px;
+    color: #008100;
+}
+
+.ccBelowTheMenu {
+
+    margin-top: 20px;
+
+}
+
+.ccBackground {
+    background-image: url("/Content/background.jpg");
+    background-size: cover;
+    
+}
+
+.ccBussRegBackground {
+    background-image: url("/Content/reg_bus.jpg");
+    background-size: cover;
+    -webkit-filter: sepia(0.6);
+    margin-top: 20px;
+}
+
+.ccCustRegBackground {
+    background-image: url("/Content/reg_customer.jpg");
+    background-size: cover;
+    -webkit-filter: sepia(0.4);
+  
+}
+
+.ccVoidRow {
+    height: 350px;
+}
+
+.ccVoidRowCustReg .ccVoidRowBussReg {
+    height: 20px;
+}
+
+.ccNavMenu {
+    color: #008100;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn-default.ccNavMenu {
+    border: 2px dashed #008100;
+    border-radius: 0;
+}
+
+.ccLoginBox {
+    min-height: 140px;
+    border: 2px dashed  #008100;
+    background-color: rgba(233, 233, 232, 0.24);
+}
+
+
+.ccCustomers {
+    height: 250px;
+    text-align: center;
+    color: #008100;
+    
+   
+}
+
+.ccBusiness {
+    height: 250px;
+    text-align: center;
+    color: #008100;
+ 
+}
+
+.ccBtmImage {
+    background-image: url("/Content/houston_skyline.png");
+    background-size: 100% 100%;
+    height: 200px;
+}
+
+.ccFootMenu {
+    text-align: center;
+}
+
+.ccEnterLogin {
+    font-size: 20px;
+}
+
+input:hover {
+    background-color: rgba(213, 252, 115, 0.45) !important;
+}
+
+input[type=text], input[type=password],input[type=tel],input[type=email] {
+    background-color: rgba(250, 229, 115, 0.90);
+    font-weight: bold;
+    color: black;
+}
+
+ .ccBussinessRegistration input[type=text], input[type=password],input[type=tel],input[type=email] {
+    background-color: rgba(248, 254, 176, 0.70);
+    
+}
+
+ .ccCustomerRegistration input[type=text], input[type=password],input[type=tel],input[type=email] {
+    background-color: rgba(248, 254, 176, 0.70);
+    
+}
+
+
+ .ccBussinessRegistration  label {
+    font-size: 17px;
+    color: #005e00;
+}
+ 
+ .ccCustomerRegistration  label {
+    font-size: 17px;
+    color: #005e00;
+}
+ 
+.ccOrder {
+    background-color: rgba(171, 209, 171, 0.47);
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ccBusinessProvider {
+    background-color: rgba(250, 229, 115, 0.70);
+    border: 1px solid green;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ccBussProvBtns {
+    background-color: rgba(250, 229, 115, 0.70);
+    border: 1px solid green;
+    border-radius: 0;
+}
+
+.ccOrderBtns {
+    background-color: rgba(171, 209, 171, 0.47);
+    border: 1px solid green;
+    border-radius: 0;
+}

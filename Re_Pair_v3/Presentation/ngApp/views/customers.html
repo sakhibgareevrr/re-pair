@@ -1,0 +1,154 @@
+﻿<div class="row">
+    <div class="col-md-12">
+        <h3>Service Orders</h3>
+        <div class="col-md-12 ccOrder" ng-repeat="order in clc.orders">
+            <div class="row">
+
+                <div class="col-md-6">
+                    <p>Order details:</p>
+
+                    <!--- <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Contractor name:
+                        </div>
+                        <div class="col-md-8">
+                            {{order.business.companyName}}
+                        </div>
+                    </div> -->
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Repair service:
+                        </div>
+                        <div class="col-md-8">
+                            {{order.serviceName}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Start date:
+                        </div>
+                        <div class="col-md-8">
+                            {{order.orderDate | date : 'medium'}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Completion date:
+                        </div>
+                        <div class="col-md-8">
+                            {{order.completionDate | date : 'medium'}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Price:
+                        </div>
+                        <div class="col-md-8">
+                            ${{order.price}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Quality:
+                        </div>
+                        <div class="col-md-8">
+                            {{order.serviceQuality}}
+                        </div>
+                    </div>
+                    <div class="col-md-12" ng-if="order.isApproved">
+                        <div class="col-md-4 text-right">
+                            Proceeded:
+                        </div>
+                        <div class="col-md-8">
+                            Yes
+                        </div>
+                    </div>
+                    <div class="col-md-12" ng-if="!order.isApproved">
+                        <div class="col-md-4 text-right">
+                            Proceeded:
+                        </div>
+                        <div class="col-md-8">
+                            No
+                        </div>
+                    </div>
+                    <div class="col-md-12" ng-if="order.isCompleted">
+                        <div class="col-md-4 text-right">
+                            Completed:
+                        </div>
+                        <div class="col-md-8">
+                            Yes
+                        </div>
+                    </div>
+                    <div class="col-md-12" ng-if="!order.isCompleted">
+                        <div class="col-md-4 text-right">
+                            Completed:
+                        </div>
+                        <div class="col-md-8">
+                            No
+                        </div>
+                    </div>
+
+                    
+
+                </div>
+
+                <div class="col-md-6" ng-init="clc.findCustomerByUserName(order.customer.userName)">
+                    <p>Customer details:</p>
+
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Full name:
+                        </div>
+                        <div class="col-md-8">
+                            {{clc.customerUser.userAddresses[0].firstName}} {{clc.customerUser.userAddresses[0].lastName}}
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Phone:
+                        </div>
+                        <div class="col-md-8">
+                            {{clc.customerUser.userAddresses[0].phone}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+                            Address:
+                        </div>
+                        <div class="col-md-8">
+                            {{clc.customerUser.userAddresses[0].addressLine1}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+
+                        </div>
+                        <div class="col-md-8">
+                            {{clc.customerUser.userAddresses[0].addressLine2}}
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-4 text-right">
+
+                        </div>
+                        <div class="col-md-8">
+                            {{clc.customerUser.userAddresses[0].city}}, {{clc.customerUser.userAddresses[0].state}} {{clc.customerUser.userAddresses[0].zipcode}}
+                        </div>
+                    </div>
+
+                    Email: {{clc.customerUser.email}}, {{clc.customerUser.id}}, {{clc.customerUser.userName}}
+
+                </div>
+
+                
+
+            </div>
+
+            <label class="btn btn-default ccOrderBtns pull-right" ng-click="">Update</label>
+
+        </div>
+    </div>
+
+</div>
+

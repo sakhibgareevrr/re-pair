@@ -1,0 +1,29 @@
+﻿<div class="row">
+    <form ng-submit="coc.createNewOrder()">
+        <div class="col-md-6 col-md-offset-3">
+            <div class="form-group">
+                <label>Service you need</label>
+                <input class="form-control" ng-model="coc.newOrder.serviceName" type="text" placeholder="Short service decription you need" />
+            </div>
+
+            <div class="form-group">
+                <label>Start Date/Time</label>
+                <input class="form-control" ng-model="coc.newOrder.orderDate" type="datetime-local" name="bdaytime">
+            </div>
+
+            <div class="form-group">
+                <label>When you need to complete it</label>
+                <input class="form-control" ng-model="coc.newOrder.completionDate" type="datetime-local" name="bdaytime">
+            </div>
+            <div class="form-group">
+                <label>Expected price ($ amount)</label>
+                <input class="form-control" ng-model="coc.newOrder.price" type="text" placeholder="Enter expected price, for example, 75.00" />
+            </div>
+            <div>
+                <input class="form-control" type="submit" value="Create New Order" />
+
+            </div>
+        </div>
+    </form>
+    
+</div>
